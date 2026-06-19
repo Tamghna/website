@@ -1,14 +1,228 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamghna's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamghna's Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.4rem;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.about{
+    background:
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1465447142348-e9952c393450');
+    background-size:cover;
+    background-position:center;
+}
+
+.downloads{
+    background:
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+    background-size:cover;
+    background-position:center;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2.5rem;
+    color:#00d4ff;
+}
+
+.card{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+.download-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#00d4ff;
+    color:black;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
+}
+
+.radio-icons{
+    font-size:3rem;
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample HTML document.</p>
-    <a href="https://github.com/Tamghna/tBill.Management/archive/refs/heads/main.zip">Download</a>
-    
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Me</a></li>
+<li><a href="#downloads">Downloads</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<h1>Welcome to Tamghna's Website</h1>
+<p>Technology • Radio • Antennas • Electronics • Science</p>
+
+<div class="radio-icons">
+📻 📡 🛰️ ⚡
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>About Me</h2>
+
+<div class="card">
+<p>
+Hello! I'm <b>Tamghna</b>, a student and technology enthusiast with a strong interest in
+radio communications, antennas, electronics, networking, computers, science, and mathematics.
+</p>
+
+<br>
+
+<p>
+I enjoy experimenting with shortwave radio reception, antenna design, FM DXing, CCTV and network systems,
+web technology, servers, and various DIY electronics projects.
+</p>
+
+<br>
+
+<p>
+My goal is to learn how things work, build practical projects, and share useful tools and resources
+with others who enjoy technology as much as I do.
+</p>
+
+<br>
+
+<p>
+Favorite topics:
+</p>
+
+<ul>
+<li>📡 Radio & Antennas</li>
+<li>🛰️ Shortwave Listening</li>
+<li>💻 Computers & Networking</li>
+<li>🔌 Electronics</li>
+<li>🧮 Mathematics</li>
+<li>🔬 Science & Research</li>
+</ul>
+
+</div>
+</section>
+
+<section class="downloads" id="downloads">
+<h2>Downloads</h2>
+
+<div class="card">
+<h3>tBill Management</h3>
+
+<p>
+Download the latest version of my project directly from GitHub.
+</p>
+
+<a class="download-btn"
+href="https://github.com/Tamghna/tBill.Management/archive/refs/heads/main.zip">
+⬇ Download Project
+</a>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Tamghna's Website | 📻 Built for Radio & Technology Enthusiasts</p>
+</footer>
+
 </body>
 </html>
+```
