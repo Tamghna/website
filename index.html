@@ -12,6 +12,7 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -19,33 +20,37 @@ body{
     color:white;
 }
 
+/* Navigation */
+
 nav{
     position:fixed;
-    width:100%;
     top:0;
-    background:rgba(0,0,0,0.8);
+    width:100%;
+    background:rgba(0,0,0,0.85);
     backdrop-filter:blur(10px);
-    padding:15px;
     z-index:1000;
+    padding:15px;
 }
 
 nav ul{
+    list-style:none;
     display:flex;
     justify-content:center;
-    list-style:none;
-    gap:30px;
+    gap:35px;
 }
 
 nav a{
-    color:white;
     text-decoration:none;
+    color:white;
     font-size:18px;
-    transition:.3s;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#00d4ff;
 }
+
+/* Hero Section */
 
 .hero{
     height:100vh;
@@ -54,9 +59,11 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
+
     background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     url('https://images.unsplash.com/photo-1509395176047-4a66953fd231');
+
     background-size:cover;
     background-position:center;
 }
@@ -64,79 +71,104 @@ nav a:hover{
 .hero h1{
     font-size:4rem;
     margin-bottom:20px;
+    text-shadow:2px 2px 10px black;
 }
 
 .hero p{
-    font-size:1.4rem;
+    font-size:1.5rem;
 }
+
+.radio-icons{
+    margin-top:25px;
+    font-size:3rem;
+}
+
+/* Sections */
 
 section{
     padding:100px 10%;
 }
 
-.about{
-    background:
-    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
-    url('https://images.unsplash.com/photo-1465447142348-e9952c393450');
-    background-size:cover;
-    background-position:center;
-}
-
-.downloads{
-    background:
-    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
-    background-size:cover;
-    background-position:center;
-}
-
 h2{
     text-align:center;
-    margin-bottom:30px;
-    font-size:2.5rem;
+    margin-bottom:35px;
     color:#00d4ff;
+    font-size:2.8rem;
 }
 
 .card{
     max-width:900px;
     margin:auto;
-    background:rgba(255,255,255,0.08);
-    padding:30px;
-    border-radius:15px;
+    background:rgba(0,0,0,0.55);
     backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:15px;
+    line-height:1.8;
+}
+
+/* ABOUT SECTION - UK COUNTRYSIDE */
+
+.about{
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* DOWNLOADS */
+
+.downloads{
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+
+    background-size:cover;
+    background-position:center;
 }
 
 .download-btn{
     display:inline-block;
     margin-top:20px;
+    padding:15px 30px;
     background:#00d4ff;
     color:black;
-    padding:15px 30px;
     text-decoration:none;
-    border-radius:10px;
     font-weight:bold;
-    transition:.3s;
+    border-radius:10px;
+    transition:0.3s;
 }
 
 .download-btn:hover{
     transform:scale(1.05);
 }
 
+/* Footer */
+
 footer{
     text-align:center;
-    padding:30px;
+    padding:25px;
     background:black;
 }
 
-.radio-icons{
-    font-size:3rem;
-    margin-top:20px;
-}
+/* Mobile */
 
 @media(max-width:768px){
-    .hero h1{
-        font-size:2.5rem;
-    }
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.hero p{
+    font-size:1.1rem;
+}
+
+nav ul{
+    gap:15px;
+}
+
 }
 </style>
 </head>
@@ -151,47 +183,54 @@ footer{
 </ul>
 </nav>
 
+<!-- HOME -->
+
 <section class="hero" id="home">
+
 <h1>Welcome to Tamghna's Website</h1>
-<p>Technology • Radio • Antennas • Electronics • Science</p>
+
+<p>
+Technology • Radio • Antennas • Electronics • Science
+</p>
 
 <div class="radio-icons">
 📻 📡 🛰️ ⚡
 </div>
+
 </section>
 
+<!-- ABOUT -->
+
 <section class="about" id="about">
+
 <h2>About Me</h2>
 
 <div class="card">
+
 <p>
-Hello! I'm <b>Tamghna</b>, a student and technology enthusiast with a strong interest in
-radio communications, antennas, electronics, networking, computers, science, and mathematics.
+Hello! I'm <strong>Tamghna</strong>, a student and technology enthusiast with a strong interest in radio communications, antenna design, electronics, networking, computers, science and mathematics.
 </p>
 
 <br>
 
 <p>
-I enjoy experimenting with shortwave radio reception, antenna design, FM DXing, CCTV and network systems,
-web technology, servers, and various DIY electronics projects.
+I enjoy experimenting with shortwave radio reception, FM DXing, antenna construction, networking projects, CCTV systems, web technologies and DIY electronics.
 </p>
 
 <br>
 
 <p>
-My goal is to learn how things work, build practical projects, and share useful tools and resources
-with others who enjoy technology as much as I do.
+Whether it is building antennas for receiving signals from distant countries, learning about radio propagation, setting up computer systems or exploring new technologies, I enjoy understanding how things work and applying that knowledge to real-world projects.
 </p>
 
 <br>
 
-<p>
-Favorite topics:
-</p>
+<h3>Interests</h3>
 
 <ul>
-<li>📡 Radio & Antennas</li>
+<li>📡 Radio Communications</li>
 <li>🛰️ Shortwave Listening</li>
+<li>📻 Antenna Design</li>
 <li>💻 Computers & Networking</li>
 <li>🔌 Electronics</li>
 <li>🧮 Mathematics</li>
@@ -199,16 +238,21 @@ Favorite topics:
 </ul>
 
 </div>
+
 </section>
 
+<!-- DOWNLOADS -->
+
 <section class="downloads" id="downloads">
+
 <h2>Downloads</h2>
 
 <div class="card">
+
 <h3>tBill Management</h3>
 
 <p>
-Download the latest version of my project directly from GitHub.
+Download the latest version of the project directly from GitHub.
 </p>
 
 <a class="download-btn"
@@ -217,10 +261,15 @@ href="https://github.com/Tamghna/tBill.Management/archive/refs/heads/main.zip">
 </a>
 
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 Tamghna's Website | 📻 Built for Radio & Technology Enthusiasts</p>
+
+<p>
+© 2026 Tamghna's Website • Built with 📻 Radio, 📡 Antennas and 🛰️ Technology in mind.
+</p>
+
 </footer>
 
 </body>
